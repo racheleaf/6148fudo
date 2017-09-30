@@ -1,0 +1,29 @@
+h1 {
+	margin: 10px 0;
+	font-size: 2em;
+}
+
+div.newsfeed li {
+	font-weight: bold;
+	margin: 10px;
+}
+
+input {
+  padding: 7px;
+  border: solid 1px #dcdcdc;
+}
+
+/*
+button {
+  background-color: white;
+  color: gray;
+  border-radius: 0.1px;
+  padding: 5px 10px;
+  font-size: 14px;
+  font-weight: lighter;
+}
+
+button:hover {
+  background-color: rgba(255,255,255,0.5);
+}
+*/

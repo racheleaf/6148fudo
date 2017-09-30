@@ -1,0 +1,20 @@
+<div class="navbar">
+	<h1><a href="/"> {{ title }} </a></h1>
+	<ul>
+		<li> <input type="text" placeholder="Search" name="searchContent"> </li>
+		<li> <a href="/newsfeed">Discover</a> </li>
+
+		{{#unless isLoggedIn}}
+		<li> <a href="/login">Login</a> </li>
+		{{/unless}}
+		{{#if isLoggedIn}}
+		<li> <a href="/myprofile">My Profile</a> </li>
+		<!-- <li> <a href="/editprofile">Edit Profile</a> </li> -->
+		<li> <a href="/logout">Logout</a> </li>
+		{{/if}} 
+
+		<!-- <li> <a href="/login">Login</a>
+		<li> <a href="/myprofile">My Profile</a>
+		<li> <a href="/logout">Logout</a> -->
+	</ul>
+</div>

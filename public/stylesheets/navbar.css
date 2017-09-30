@@ -1,0 +1,161 @@
+div.masthead {
+  margin-left: 0rem;
+  margin-right: 0rem;
+
+  overflow: auto;
+  margin-top: 0rem;
+  margin-bottom: -5rem;
+
+}
+
+
+div.masthead-brand {
+  margin-bottom: 3rem;
+  font-size: 25pt;
+  font-weight: bold;
+}
+
+div.masthead-brand a.fudotitle {
+  text-decoration: none;
+  color: #000000;
+}
+
+div.masthead-brand a.fudotitle:hover {
+  text-decoration: none;
+  color: #000000;
+}
+
+
+div.nav-masthead div.nav-link {
+  padding: .25rem;
+  font-weight: bold;
+  font-size: 15pt;
+  color: white;
+  border-bottom: .1rem solid transparent;
+}
+
+div.nav-masthead div.nav-link:hover,
+div.nav-masthead div.nav-link:focus {
+  border-bottom-color: rgba(255,255,255,.25);
+}
+
+div.nav-masthead div.nav-link + div.nav-link {
+  margin-left: 1rem;
+}
+
+div.nav-masthead div.active {
+  color: #fff;
+  border-bottom-color: #fff;
+}
+
+@media (min-width: 5em) {
+  div.masthead-brand {
+    float: left;
+  }
+  div.nav-masthead {
+    float: right;
+  }
+}
+
+.action-button {
+  width: 100px;
+  background: #000033;
+  font-style: normal;
+  font-weight: bold;
+  color: white;
+  border: 0 none;
+  border-radius: 3px;
+  cursor: pointer;
+  padding: 10px 5px;
+  margin: 10px 5px;
+}
+
+.action-button:hover {
+  box-shadow: 0 0 0 2px white, 0 0 0 3px #000033;
+}
+
+.nav-link {
+  text-decoration: none;
+}
+
+.hidden {
+  display: none;
+}
+
+#postTitle{
+  font-size: 20px;
+  font-weight: bold;
+  color: rgba(0,0,0,.8);
+  background-color: rgba(255,255,255,0.99);
+  border-radius: 5px;
+  padding: 7px;
+  border-color:gray;
+  border-style:none;
+
+}
+
+#postCaption{
+  color: rgba(0,0,0,.8);
+  background-color: rgba(255,255,255,0.8);
+  border-radius: 5px;
+  border-color: gray;
+}
+
+.backdrop {
+  background-color: rgba(0,0,0,.25);
+}
+
+#loading {
+  max-width: 300px;
+  max-height: 300px;
+  height:100%;
+  width:auto;
+  background-image: url('../images/loading.gif');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  margin-top: auto;
+  margin-right:70px;
+  margin-left: auto;
+
+}
+
+
+
+#addpostdiv {
+  width:100%;
+  height:100%;
+  top:0;
+  left:0;
+  display:none;
+  position:fixed;
+  background-color:black;
+  overflow:auto;
+  z-index: 10
+}
+
+.output {
+	size: .8em;
+}
+
+html * {
+   font-family: "Open Sans" !important;
+}
+
+#addpostdiv .buttonsAddpost {
+background-color:#000033;
+border-radius:5px;
+border:none;
+padding:10px 25px;
+color:#FFF;
+
+}
+
+#addpostdiv .buttonsAddpost:hover{
+background-color:#FF9980;
+}
+
+
+.error-output {
+  color: red;
+}

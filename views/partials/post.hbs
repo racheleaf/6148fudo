@@ -1,0 +1,98 @@
+<div class="post">
+ <div class="post {{{imageID}}}" id="wrap"> 
+ 
+  <div class="w3-content w3-padding-xlarge w3-margin-top w3-padding-bottom" id="portfolio" width= "1000" height= "700">
+
+  <div class="w3-container w3-black" id="top">
+
+
+  <div class="title {{{imageID}}}-editpostTitle" id="titlealt">{{ postTitle }} </div>
+  {{#if hasRecipe}} 
+    <img src="../../images/recipeicon_white.png" style="height:30px; width:30px; bottom:0px; position:relative; top: 10px; margin-left:10px;">
+  {{/if}}
+
+  <div class="author" id="authoralt"><a class="author" style="color:white" href="/profile/{{{postUsername}}}">{{ postUsername }}</a> </div>
+  </div>
+
+  <div class="w3-display-container">
+  <img src="{{{imageURL}}}" class="{{{imageID}}}-image w3-image w3-hover-opacity" style="cursor: pointer" onclick="openGallery('{{{imageID}}}')" width= "1000" height= "700" id="image" alt="{{{postCaption}}}" title="{{{postTitle}}} | {{{postAuthor}}}">
+
+
+  <div class="w3-container w3-black" id="bottom">
+    {{#if isLoggedIn }}
+
+      <!-- save posts system -->
+      {{#unless_in imageID savedPosts}}
+      <button type="button" class="{{{imageID}}}-savingpost-submit show save w3-hover-opacity" style="background-color:transparent; border-color:transparent; cursor: pointer; text-align: center;line-height:35px;font-size:28px; margin-right:0; margin-top:5px; float:left; color:white;height:35px" onclick="savePost('{{{imageID}}}')">+</button>
+      <button type="button" class="{{{imageID}}}-unsavingpost-submit hidden save w3-hover-opacity" style="background-color:transparent; border-color:transparent; cursor: pointer; text-align: center;line-height:35px;font-size:28px; margin-right:0; margin-top:5px; float:left; color:white; height:35px" onclick="unsavePost('{{{imageID}}}')">✓</button>
+      {{/unless_in}}
+
+      {{#if_in imageID savedPosts}}
+      <button type="button" class="{{{imageID}}}-savingpost-submit hidden save w3-hover-opacity" style="background-color:transparent; border-color:transparent; cursor: pointer; line-height:35px; font-size:28px; margin-right:0; margin-top:5px; float:left; height:35px; color:white" onclick="savePost('{{{imageID}}}')">+</button>
+      <button type="button" class="{{{imageID}}}-unsavingpost-submit show save w3-hover-opacity" style="background-color:transparent; border-color:transparent; cursor: pointer; text-align: center;line-height:35px;font-size:28px; margin-right:0; margin-top:5px;float:left; color:white; height:35px;" onclick="unsavePost('{{{imageID}}}')">✓</button>
+      {{/if_in}}
+
+      <!-- like posts system -->
+      {{#unless_in activeUser userLikes}}
+      <button type="button" class="{{{imageID}}}-likingpost-submit show like w3-hover-opacity" style="background-color:transparent; border-color:transparent; cursor: pointer; text-align: center;line-height:35px;font-size:28px; margin-right:0; margin-top:5px; float:left; color:white;height:35px" onclick="likePost('{{{imageID}}}', {{{postLikes}}})">♡</button>
+      <button type="button" class="{{{imageID}}}-unlikingpost-submit hidden like w3-hover-opacity" style="background-color:transparent; border-color:transparent; cursor: pointer; text-align: center;line-height:35px;font-size:28px; margin-right:0; margin-top:5px; float:left; color:white; height:35px" onclick="unlikePost('{{{imageID}}}', {{{postLikes}}})">♥</button>
+      {{/unless_in}}
+
+      {{#if_in activeUser userLikes}}
+      <button type="button" class="{{{imageID}}}-likingpost-submit hidden like w3-hover-opacity" style="background-color:transparent; border-color:transparent; cursor: pointer; line-height:35px; font-size:28px; margin-right:0; margin-top:5px; float:left; height:35px; color:white" onclick="likePost('{{{imageID}}}', {{{postLikes}}})">♡</button>
+      <button type="button" class="{{{imageID}}}-unlikingpost-submit show like w3-hover-opacity" style="background-color:transparent; border-color:transparent; cursor: pointer; text-align: center;line-height:35px;font-size:28px; margin-right:0; margin-top:5px;float:left; color:white; height:35px;" onclick="unlikePost('{{{imageID}}}', {{{postLikes}}})">♥</button>
+      {{/if_in}}
+    {{else}}
+      <button type="button" class="show like" style="background-color:transparent; border-color:transparent; text-align: center;line-height:35px;font-size:28px; margin-right:0; margin-top:5px; float:left; color:white;height:35px">♡</button>
+    {{/if}}
+    
+    <div style="height:35px; line-height:35px; float:left; width:auto; margin-left:0; padding-left: 5px; padding-top:3px; margin-top:5px; margin-bottom: 5px; color:white; font-size:28px; text-align: center;" class="{{{imageID}}}-numLikes" >{{ postLikes }} </div>
+
+    {{#if isLoggedIn }}
+    {{#if_eq activeUser postUsername }}
+
+    <a href="#" class="open_controls w3-hover-opacity" style="cursor: pointer; line-height:35px; background-color: black; color:white; font-size:15px; margin-right:0; margin-top:5px; float:right; height:35px;"> o o o</a>
+  
+      <div class="controls" style="text-align: center; background-color: white">
+        <button type="button" class="functionbutton editpost-view" onclick="openEditPostForm('{{{imageID}}}')">Edit Post</a>
+        <button type="button" class="functionbutton deletingpost-submit" onclick="deletePost('{{{imageID}}}')">Delete Post</a>
+      </div>
+
+    {{/if_eq}}
+    {{/if}}
+
+    </div>     
+
+  </div>
+
+  <p class="w3-container w3-white"> </p>
+
+
+  <!-- Modal for full size images on click-->
+  <div id="modal01" class="w3-modal w3-black w3-padding-0" >
+    <span class="w3-closebtn w3-text-white w3-opacity w3-hover-opacity-off w3-xxlarge w3-container w3-display-topright" id="post-hide" >×</span>
+    <div class="w3-modal-content w3-animate-zoom w3-transparent w3-padding-64" style="vertical-align:middle">
+      
+      <h1 style="margin:0; padding:0; margin-left: auto; margin-right:auto; text-align: center;" id="title"> </h1>
+      <div class="item" style="text-align: center;">
+      
+      <img id="img01" class="modalimage" style="text-align: center;
+        display: block;
+        max-width:800px;
+        max-height:300px;
+        width: auto;
+        height: auto;
+        margin-left: auto;
+        margin-right:auto;
+        margin-top: 20px;
+        margin-bottom: 20px">
+      </div>
+      <div class="item" style="display: inline-block">
+      <p id="caption" style="display: block;"></p>
+      </div>
+    </div>
+  </div>
+ </div>
+
+</div>
+

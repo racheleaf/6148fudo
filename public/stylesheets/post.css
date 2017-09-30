@@ -1,0 +1,104 @@
+.portfolio #image {
+  max-height: 100%;
+  max-width: 100%;
+  width: 1000px;
+  height:700px;
+  margin-bottom: -10px;
+}
+
+.portfolio {
+	width: 1000px;
+	height: 700px;
+	background-color: #111111;
+	overflow: hidden;
+	margin:20px;
+}
+
+.fa {
+	font-size: 1.5em !important;
+}
+
+
+#top #titlealt {
+	float:left;
+	font-size: 2em;
+}
+
+#top #authoralt {
+	float: right;
+	font-size: 1.5em;
+	padding-top: 8px;
+}
+
+div #top {
+	padding: 0.8em 20px;
+	margin: 0;
+}
+
+#bottom {
+	padding: 0.8em 20px;
+	margin: -5px 0 0 0;
+}
+
+.hidden {
+	display: none;
+}
+
+.show {
+	display: ;
+}
+
+.like {
+	/* like and unlike buttons */
+}
+
+
+
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+.open_controls, .controls {
+  background-color: #444444;
+  border-radius: 3px;
+  padding: 5px 7px;
+  position: relative;
+}
+
+.open_controls {
+  z-index: 1;
+}
+
+.controls {
+  border-top: 1px solid #444;
+  display: none;
+  margin-top: 4px;
+  z-index: 2;
+  font-family: normal;
+  margin: 20px auto;
+  width: 120px;
+}
+
+.controls a {
+  display: block;
+  margin-top: 5px;
+}
+
+/* o o o end pullout styling */
+
+a.author {
+	text-decoration: none;
+}
+
+.functionbutton {
+	padding: 2px;
+	border: none;
+	background: none;
+	cursor: pointer;
+}
+
+.functionbutton:focus {
+    outline: 0;
+}

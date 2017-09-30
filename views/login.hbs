@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Login Form</title>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link href="../../stylesheets/login.css" rel="stylesheet">
+  <link href="../../stylesheets/navbar.css" rel="stylesheet">
+  <link rel="stylesheet" href="../../../bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+  <link rel="icon" href="/images/fudofavicon.png">
+
+</head>
+
+<body>
+  {{> navbar-new}}
+
+  <div class="login" style="margin-top:150px">
+  <h1>L O G - I N</h1>
+  
+  <div class="forminfo">
+    <!-- multistep form -->
+    <form id="msform" name="login" method="post" action="/login">
+      
+    <!-- fieldsets -->
+    <fieldset>
+      <!-- <h3 class="fs-subtitle">This is step 1</h3> -->
+      <input type="text" name="username" placeholder="Username" id="username" class="username" required="required"/> 
+      <input type="password" name="password" placeholder="Password" id="password" class="password" required="required"/> 
+      <button type="submit" class="action-button">Log in</button>
+    </fieldset>
+    <a style="color:rgba(255,255,255,0.9); padding:10px" href="/signup">Register Here</a>
+
+</form>
+  </div>
+  </div>
+
+</body>
+</html>

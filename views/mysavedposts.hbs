@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{{ name }}</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../../stylesheets/w3lib.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
+  <link href="../../stylesheets/newsfeedstyle.css" rel="stylesheet">
+  <link href="../../stylesheets/post.css" rel="stylesheet">
+  <link href="../../stylesheets/navbar.css" rel="stylesheet">
+  <link href="../../stylesheets/myprofile.css" rel="stylesheet">
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+  <link rel="stylesheet" href="../../../bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="http://t4t5.github.io/sweetalert/dist/sweetalert.css">
+  <link rel="icon" href="/images/fudofavicon.png">
+  <style>
+    body,h1,h2,h3,h4,h5 {font-family: Normal}
+    .w3-quarter img{margin-bottom: -6px; cursor: pointer}
+    .w3-quarter img:hover{opacity: 0.6; transition: 0.3s}
+  </style>
+</head>
+
+<body class="w3-light-grey">
+
+<!-- Sidenav/menu -->
+<nav class="w3-sidenav w3-black w3-animate-left w3-center w3-top w3-text-light-grey w3-large" style="z-index:3;width:250px;font-weight:bold;display:none;left:0;" id="mySidenav">
+
+  <a href="#" onclick="w3_close()" style="color:white" class="w3-padding-32">C L O S E</a> 
+  <a href="/newsfeed" onclick="w3_close()" style="color:white" class="w3-padding-16"> <img src="../../images/check_white.png" style="height:25px; width:25px; margin-right:8px">A L L</a>
+  <a href="/recipe" onclick="w3_close()" style="color:white" class="w3-padding-16"> <img src="../../images/recipeicon_white.png" style="height:25px; width:25px; margin-right:5px"> R E C I P E S</a> 
+  {{#if isLoggedIn}}
+  <a href="/mysavedposts" onclick="w3_close()" style="color:white" class="w3-padding-16"> ✓ <!-- <img src="../../images/recipeicon_white.png" style="height:25px; width:25px; margin-right:5px"> --> S A V E D </a> 
+  {{/if}}
+
+</nav>
+
+
+<!-- Overlay effect when opening sidenav on small screens -->
+<div class="w3-overlay w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+<!-- !Page content! -->
+
+<div class="w3-main w3-content" style="max-width:1600px;margin-top:-10px";>
+  {{> navbar-newsfeed }}
+  {{> mysavedpostsview }}
+<!-- End page content -->
+</div>
+
+<script>
+// Script to open and close sidenav
+function w3_open() {
+    document.getElementById("mySidenav").style.display = "block";
+    document.getElementById("myOverlay").style.display = "block";
+}
+
+function w3_close() {
+    document.getElementById("mySidenav").style.display = "none";
+    document.getElementById("myOverlay").style.display = "none";
+}
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  var v = element.alt.replace(/\n/g, "<br/>");
+  captionText.innerHTML = v;
+  var titletext = document.getElementById("title");
+  titletext.innerHTML = element.title;
+}
+
+// Get the modal
+var modal = document.getElementById('addpostdiv');
+var modal1 = document.getElementById('editpostdiv');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+
+    if (event.target == modal1) {
+        modal1.style.display = "none";
+    }
+}
+
+
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="/js/ajax.js"></script>
+<script src="/js/upload.js"></script>
+<script src="/js/postfunctions.js"></script>
+<script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+<script src="http://t4t5.github.io/sweetalert/dist/sweetalert-dev.js"></script>
+</body>
+</html>

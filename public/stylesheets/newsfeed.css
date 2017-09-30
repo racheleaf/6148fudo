@@ -1,0 +1,98 @@
+div.newsfeed {
+  width: 50%;
+  position: absolute;
+  right: 11.5%;
+  background-color: ivory;
+  border-radius: 10px;
+  overflow: auto;
+  padding: 25px;
+  margin: 5px;
+}
+
+form.addpost {
+	border-radius: 5px;
+	border: 1px solid black;
+	padding: 10px;
+	margin: 5px;
+}
+
+form.addpost li {
+	font-size: .8em;
+	display: block;
+}
+
+.hidden {
+  display: none;
+}
+
+#loading {
+  width: 104px;
+  height: 104px;
+  background-image: url('../images/loading.gif');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+#editpostTitle{
+  font-size: 20px;
+  font-weight: bold;
+  color: rgba(0,0,0,.8);
+  background-color: rgba(255,255,255,0.99);
+  border-radius: 5px;
+  padding: 7px;
+  border-color:gray;
+  border-style:none;
+
+}
+
+#editpostCaption{
+  color: rgba(0,0,0,.8);
+  background-color: rgba(255,255,255,0.8);
+  border-radius: 5px;
+  border-color: gray;
+}
+
+#edit-loading {
+  max-width: 300px;
+  max-height: 300px;
+  height:100%;
+  width:auto;
+  background-image: url('../images/loading.gif');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  margin-top: auto;
+  margin-right:70px;
+  margin-left: auto;
+
+}
+
+#editpostdiv {
+  width:100%;
+  height:100%;
+  top:0;
+  left:0;
+  display:none;
+  position:fixed;
+  background-color:black;
+  overflow:auto;
+  z-index: 10
+}
+
+.output {
+  size: .8em;
+}
+
+#editpostdiv .buttonsEditpost {
+background-color:#000033;
+border-radius:5px;
+border:none;
+padding:10px 25px;
+color:#FFF;
+
+}
+
+#editpostdiv .buttonsEditpost:hover{
+background-color:#FF9980;
+}

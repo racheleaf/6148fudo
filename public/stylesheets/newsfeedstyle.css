@@ -1,0 +1,133 @@
+/*Nothing here yet*/
+.w3-left {
+  font-size: 25pt;
+  font-weight: bold;
+}
+
+/* Padding for spacing */
+.inner {
+  padding: 3rem;
+  background: rgba(255,255,255,.5);
+  margin-top: -1.5rem;
+  color: rgba(0,0,0,.75);
+}
+
+/*
+ * Header
+ */
+
+.masthead {
+  margin-left: 0rem;
+  margin-right: 0rem;
+
+  overflow: auto;
+  margin-top: 0rem;
+  margin-bottom: -5rem;
+
+}
+
+.masthead-brand {
+  margin-bottom: 3rem;
+  font-size: 25pt;
+  font-weight: bold;
+}
+
+.masthead-brand a.fudostyle {
+  text-decoration: none;
+  color: #000000;
+}
+
+.masthead-brand a.fudostyle:hover {
+  text-decoration: none;
+  color: #000000;
+}
+
+.nav-masthead .nav-link {
+  padding: .25rem;
+  font-weight: bold;
+  font-size: 15pt;
+  color: rgba(255,255,255);
+  background-color: transparent;
+  border-bottom: .1rem solid transparent;
+}
+
+.nav-masthead .nav-link:hover,
+.nav-masthead .nav-link:focus {
+  border-bottom-color: black;
+}
+
+.nav-masthead .nav-link + .nav-link {
+  margin-left: 1rem;
+}
+
+.nav-masthead .active {
+  color: #fff;
+  border-bottom-color: #fff;
+}
+
+@media (min-width: 5em) {
+  .masthead-brand {
+    float: left;
+  }
+  .nav-masthead {
+    float: right;
+  }
+}
+
+#profilepic{
+  max-width: 300px;
+    max-height: 200px;
+}
+#about{margin:0px 43px; padding-top:30px; color: rgba(0,0,0,.75);}
+#about h1{float:left;}
+#about #top-social{float:right; padding-top:62px;}
+#about #top-social li{float:left; list-style:none; margin-left:10px;}
+#about #top-social .facebook{
+  text-indent:-9999px; 
+  display:block; 
+  width:26px; 
+  height:26px; 
+  background:url(images/sm-facebook-icon.png) no-repeat;
+}
+#about #top-social .twitter{
+  text-indent:-9999px; 
+  display:block; 
+  width:31px; 
+  height:24px; 
+  background:url(images/sm-twitter-icon.png) no-repeat;
+}
+#about #top-social .linkedin{
+  text-indent:-9999px; 
+  display:block; 
+  width:26px; 
+  height:26px; 
+  background:url(images/sm-linkedin-icon.png) no-repeat;
+}
+#about .content{overflow:auto;}
+#about .content img{float:left; margin-right:40px; border:5px solid #222222;}
+#about .content #service-icons{margin-top:20px;}
+#about .content #service-icons li{
+  display:block;
+  width:108px;
+  height:108px;
+  text-indent:-9999px;
+  list-style:none;
+  float:left;
+  margin-right:20px;
+}
+#about .content #service-icons li.services-design{background:url(images/icon-1.png) no-repeat;}
+#about .content #service-icons li.services-mobile{background:url(images/icon-2.png) no-repeat;}
+#about .content #service-icons li.services-film{background:url(images/icon-3.png) no-repeat;}
+#about .content #service-icons li.services-photo{background:url(images/icon-4.png) no-repeat;}
+
+.nosavedposts {
+  background-color: #fff;
+  margin: auto;
+  margin-top: 50px;
+  width: 80%;
+  overflow: hidden;
+}
+
+.nosavedposts p {
+  margin: 40px;
+}
